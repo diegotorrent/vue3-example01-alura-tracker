@@ -28,13 +28,9 @@ export default defineComponent({
     },
     methods:{
         finalizarTarefa( tempoDecorrido: number): void {
-            // console.log('Tempo da tarefa: ' + tempoDecorrido)
-            // console.log('Nome da tarefa: ' + this.descricao)
             this.$emit("aoSalvarTarefa",{duracaoEmSegundos: tempoDecorrido, descricao: this.descricao})
             this.descricao = ''
         }
-    }
-    // /
-    
+    }    
 }) 
 </script>
